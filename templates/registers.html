@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Registration</title>
+<!-- //<script type="text/javascript" src="{{ url_for('static', filename = 'js/validateForm.js') }}">
+ --><!-- </script> -->
+</head>
+<body>
+	<div class="row">
+		<div class="col-md-3"><img id="poster1" src="static/IIIT-H.png" class="img-responsive img-rounded" width="200" height="300"></div>
+		<div class ="col-md-6">
+			<br>
+			<p><font size="8"><b>STUDENT REGISTRATION</b></font></p>
+			<br><br><br>
+			<form action="/register" method="POST" >
+    <p><b>Email:</b> <input type="email" name="email"></p>
+
+    <P><b>Password:</b> <input type="password" name="password" id="password" required></p>
+
+    <p><b>Confirm Password:</b> <input type="password" name="cpassword" id="cpassword"></p>
+
+    <p><b>First Name:</b> <input type="text" name="firstName"></p>
+    <p><b>Last Name:</b> <input type="text" name="lastName"></p>
+
+    <p><input type="submit" value="Register"></p>
+
+    <b><a href="/loginForm">Login here</a></b>
+
+</form>
+</body>
+</html>
+
+
+

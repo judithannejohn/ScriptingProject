@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> home </title>
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript">$(function() {
+      $("#tfq2b").click(function() {
+        if ($("#tfq2b").val() == "Search our website"){
+          $("#tfq2b").val(""); 
+        }});
+      });
+    </script>
+    <style type="text/css">
+  #tfheader{
+    background-color:#c3dfef;
+  }
+  #tfnewsearch{
+    float:right;
+    padding:20px;
+  }
+  .tftextinput2{
+    margin: 0;
+    padding: 5px 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:14px;
+    color:#666;
+    border:1px solid #0076a3; border-right:0px;
+    border-top-left-radius: 5px 5px;
+    border-bottom-left-radius: 5px 5px;
+  }
+  .tfbutton2 {
+    margin: 0;
+    padding: 5px 7px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:14px;
+    font-weight:bold;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    border: solid 1px #0076a3; border-right:0px;
+    background: #0095cd;
+    background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
+    background: -moz-linear-gradient(top,  #00adee,  #0078a5);
+    border-top-right-radius: 5px 5px;
+    border-bottom-right-radius: 5px 5px;
+  }
+  .tfbutton2:hover {
+    text-decoration: none;
+    background: #007ead;
+    background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
+    background: -moz-linear-gradient(top,  #0095cc,  #00678e);
+  }
+  /* Fixes submit button height problem in Firefox */
+  .tfbutton2::-moz-focus-inner {
+    border: 0;
+  }
+  .tfclear{
+    clear:both;
+  }
+</style>
+</head>
+<body>
+	<div class="row">
+    <div class="col-md-3"><img id="poster1" src="static/IIIT-H.png" class="img-responsive img-rounded" width="200" height="300">
+      <br><br>
+      <p><font size="5"><b>Centers of IIIT- Hyderabad</b></font></p>      
+      <form action="CCNSB.html">
+        <li><input type="submit" value="CCNSB" /></li>
+      </form>
+      <form action="SPCRC.html">
+        <li><input type="submit" value="SPCRC" /></li>
+      </form>
+      <form action="DSAC.html">
+        <li><input type="submit" value="DSAC" /></li>
+      </form>
+      <form action="LTRC.html">
+        <li><input type="submit" value="LTRC" /></li>
+      </form>
+      <form action="RRC.html">
+        <li><input type="submit" value="RRC" /></li>
+      </form>
+      <form action="CVIT.html">
+        <li><input type="submit" value="CVIT" /></li>
+      </form>
+      <form action="CogSci.html">
+        <li><input type="submit" value="CogSci" /></li>
+      </form>
+      <form action="LSI.html">
+        <li><input type="submit" value="LSI" /></li>
+      </form>
+      <form action="SERC.html">
+        <li><input type="submit" value="SERC" /></li>
+      </form></div>
+	<div class ="col-md-6">
+      <div id="tfheader">
+    <form id="tfnewsearch" method="get" action="http://www.google.com">
+            <input type="text" id="tfq2b" class="tftextinput2" name="q" size="21" maxlength="120" value="Search our website"><input type="submit" value=">" class="tfbutton2">
+    </form>
+    <div class="tfclear"></div>
+  </div>
+<form >
+	<br>
+	<br>
+  <em>Professor Name</em>:<br>
+  <input type="text" name="firstname" onkeyup="coursename(this)"/>
+  <br>
+  <em>Research Updates</em>:<br>
+  <textarea name="message" rows="5" cols="50" onkeyup="description(this)">
+  </textarea>
+  <br><br>
+  <button type="button" onclick="update()">post</button>
+  <button type="button" onclick="show()">show entries</button><p id="demo"></p>
+</form>
+</div>
+<div class ="col-md-3">
+	    
+        <br>
+      	<br>
+      	<h1 id="heading">Fellow Proffessor</h1>
+      	<form action="http://faculty.iiit.ac.in/~abi_chem/">
+      		<li><input type="submit" value="Abhijit Mitra,Phd(IIT Kanpur)" /></li>
+      	</form>
+        <form action="http://bioinf.iiit.ac.in/nita/index.html">
+          <li><input type="submit" value="Nita Parekh" /></li>
+        </form>
+        <form action="http://faculty.iiit.ac.in/~vinod.pk">
+          <li><input type="submit" value="Vinod P.K." /></li>
+        </form>
+        <form action="http://ccnsb.iiit.ac.in/~deva/Deva/">
+          <li><input type="submit" value="Deva Priyakumar" /></li>
+        </form>
+        <form action="http://faculty.iiit.ac.in/~laltu/">
+          <li><input type="submit" value="Harjinder Singh" /></li>
+        </form>
+        <form action="http://www.iiit.ac.in/people/faculty/vgandhi">
+          <li><input type="submit" value="Vineet Gandhi" /></li>
+        </form>
+        <form action="http://robotics.iiit.ac.in/">
+          <li><input type="submit" value="C.V.Jawahar" /></li>
+        </form>
+        <form action="http://drpsdeb.blogspot.com">
+          <li><input type="submit" value="PS Deb" /></li>
+        </form>
+        <form action="http://www.iiit.ac.in/~kamal">
+          <li><input type="submit" value="Kamalakar Karlapalem" /></li>
+        </form>
+        <form action="http://faculty.iiit.ac.in/~kishore/">
+          <li><input type="submit" value="Kishore S.Prahallad" /></li>
+        </form>
+        <form action="https://faculty.iiit.ac.in/~sangal/web/">
+          <li><input type="submit" value="Rajeev Sangal" /></li>
+        </form>
+        <form action="https://www.iiit.ac.in/people/faculty/abhishek.sarkar/">
+          <li><input type="submit" value="Dr. Abhishek Sarkar" /></li>
+        </form>
+        <form action="http://lsi.iiit.ac.in/faculty/rcprasad/RCPrasad.htm">
+          <li><input type="submit" value="Rama Chandra Pillutla" /></li>
+        </form>
+        <form action="http://lsi.iiit.ac.in/faculty/rajan/rajan.htm">
+          <li><input type="submit" value="Dr. Krishnan Sundara Rajan" /></li>
+        </form>
+        <form action="http://lsi.iiit.ac.in/faculty/srehana/srehana.htm">
+          <li><input type="submit" value="Dr. Shaik Rehana" /></li>
+        </form>
+        <form action="http://oldwww.iiit.ac.in/people/faculty/ramamurthy/">
+          <li><input type="submit" value="Garimella Rama Murthy" /></li>
+        </form>
+        <form action="http://speech.iiit.ac.in/index.php?option=com_jresearch&view=member&task=show&id=68&Itemid=59">
+          <li><input type="submit" value="Anil kumar Vuppala" /></li>
+        </form>
+
+
+        </ul>
+
+
+        
+</div>
+<script>
+var myObj;
+myObj=
+{	"courses": [
+{
+			"prof_name": "Nita",
+			"Research_update": "I am currently working on ngs dataset"
+            }
+	]
+}
+var cname,cdescription;
+function coursename(n)
+{
+	cname=n.value;
+	console.log(cname);
+}
+function description(d)
+{
+	cdescription=d.value;
+}
+function update()
+{
+	var n=myObj.courses.length;
+	myObj.courses[n]={prof_name:cname,
+					Research_update:cdescription};
+//	var obj=JSON.stringify(myObj);
+	console.log(myObj.courses[n]);
+}
+function show()
+{
+    var data="";
+        var s=myObj.courses;
+        console.log(s.length);
+        for (var i = 0; i < s.length; i++) {
+        	console.log(s[i]);
+            data+='<div id="courses">';
+            data+='<p>prof name:'+s[i].prof_name+'</p>';
+            data+='<p>Research description:'+s[i].Research_update+'</p>';
+            data+='</div>';
+        }
+        document.getElementById('demo').innerHTML += data;  
+}
+
+</script>
+
+</body>
+</html>

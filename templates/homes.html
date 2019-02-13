@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+/* Add a gray background color with some padding */
+body {
+    font-family: Arial;
+    padding: 20px;
+    background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+    padding: 30px;
+    font-size: 40px;
+    text-align: center;
+    background: lightblue;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+    float: left;
+    width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+    float: left;
+    width: 25%;
+    padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+     background-color: white;
+     padding: 20px;
+     margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: lightblue;
+    margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+        width: 100%;
+        padding: 0;
+        background: brown;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="row">
+  <div class="col-md-3"><img id="poster1" src="static/IIIT-H.png" class="img-responsive img-rounded" width="200" height="300"></div>
+  <div class="col-md-6"><p><font size="8"><b>STUDENTS BLOG</b></font></p>
+    {% if not loggedIn %}
+    <div id="signInButton">
+      <button>
+        <a class="h" href="loginForm">Sign In </a>
+      </button>
+      <button>
+        <a class="h" href="registrationForm">Register Here</a>
+        </button>
+     </div>
+{% for data in itemData %}
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      {% for row in data %}
+      <h2>{{row[0]}}</h2>
+      <h5>{{row[2]}}</h5>
+      <p>{{row[1]}}</p>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endfor %}
+{% else %}
+<div class="dropdown">
+	<h3>Hello,{{firstName}}</h3>
+	<button><a class="link" href ="root1">Home Page</a></button>
+	<button><a class="link" href="addblog">Add To Blog</a></button>
+	<button><a class="link" href ="logout">Sign Out</a></button>
+	<button><a class="link" href ="viewmine"> View Your Blog </a></button>
+</div>
+{% for data in itemData %}
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      {% for row in data %}
+      <h2>{{row[0]}}</h2>
+      <h5>{{row[2]}}</h5>
+      <p>{{row[1]}}</p>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endfor %}
+{% endif %}
+<div class="footer">
+  <h2>--End--</h2>
+</div>
+</div>
+<div class="col-md-3">
+   <br>
+        <br>
+        <h1 id="heading">Follow Proffessors</h1>
+        <form action="http://faculty.iiit.ac.in/~abi_chem/">
+          <li><input type="submit" value="Abhijit Mitra,Phd(IIT Kanpur)" /></li>
+        </form>
+        <form action="http://bioinf.iiit.ac.in/nita/index.html">
+          <li><input type="submit" value="Nita Parekh" /></li>
+        </form>
+        <form action="http://faculty.iiit.ac.in/~vinod.pk">
+          <li><input type="submit" value="Vinod P.K." /></li>
+        </form>
+        <form action="http://ccnsb.iiit.ac.in/~deva/Deva/">
+          <li><input type="submit" value="Deva Priyakumar" /></li>
+        </form>
+        <form action="http://faculty.iiit.ac.in/~laltu/">
+          <li><input type="submit" value="Harjinder Singh" /></li>
+        </form>
+        <form action="http://www.iiit.ac.in/people/faculty/vgandhi">
+          <li><input type="submit" value="Vineet Gandhi" /></li>
+        </form>
+        <form action="http://robotics.iiit.ac.in/">
+          <li><input type="submit" value="C.V.Jawahar" /></li>
+        </form>
+        <form action="http://drpsdeb.blogspot.com">
+          <li><input type="submit" value="PS Deb" /></li>
+        </form>
+        <form action="http://www.iiit.ac.in/~kamal">
+          <li><input type="submit" value="Kamalakar Karlapalem" /></li>
+        </form>
+        <form action="http://faculty.iiit.ac.in/~kishore/">
+          <li><input type="submit" value="Kishore S.Prahallad" /></li>
+        </form>
+        <form action="https://faculty.iiit.ac.in/~sangal/web/">
+          <li><input type="submit" value="Rajeev Sangal" /></li>
+        </form>
+        <form action="https://www.iiit.ac.in/people/faculty/abhishek.sarkar/">
+          <li><input type="submit" value="Dr. Abhishek Sarkar" /></li>
+        </form>
+        <form action="http://lsi.iiit.ac.in/faculty/rcprasad/RCPrasad.htm">
+          <li><input type="submit" value="Rama Chandra Pillutla" /></li>
+        </form>
+        <form action="http://lsi.iiit.ac.in/faculty/srehana/srehana.htm">
+          <li><input type="submit" value="Dr. Shaik Rehana" /></li>
+        </form>
+        <form action="http://oldwww.iiit.ac.in/people/faculty/ramamurthy/">
+          <li><input type="submit" value="Garimella Rama Murthy" /></li>
+        </form>
+        <form action="http://speech.iiit.ac.in/index.php?option=com_jresearch&view=member&task=show&id=68&Itemid=59"">
+          <li><input type="submit" value="Anil kumar Vuppala" /></li>
+        </form>
+
+
+        </ul>
+</div>
+
+
+
+</div>
+
+</body>
+</html>

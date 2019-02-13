@@ -1,0 +1,153 @@
+/* Custom stylesheet for the project. */
+/* * {
+    outline: 1px solid red;
+} */
+
+@import url("https://fonts.googleapis.com/css?family=Rammetto+One");
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+.need_flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+img {
+    max-width: 90%;
+    max-height: 90%;
+    vertical-align: right;
+}
+
+.main_box {
+    padding: 0.5%;
+    margin: 0.5%;
+}
+
+.image_box {
+    padding-left: 7%;
+    padding-bottom: 0.5%;
+    padding-right: 0.5%;
+    padding-top: 0.5%;
+    margin: 1%;
+}
+
+.data_box {
+    vertical-align: top;
+}
+
+.overview {
+    max-height: 65%;
+    margin: auto;
+    color: #6E5858;
+    font-family: Montserrat;
+    vertical-align: top;
+    margin-top: 0.1%;
+}
+
+.more_info {
+    max-height: 10%;
+    margin: auto;
+    text-align: right;
+    vertical-align: top;
+    margin-top: 0.1%;
+}
+
+.vote_title_rel_box {
+    max-height: 20%;
+    /* margin-top: 1%;
+    margin-bottom: 0.1%; */
+    margin: auto;
+    padding: 0.5%;
+    font-family: Lato;
+    color: #6E5858;
+    max-width: 100%;
+}
+
+#prev_movie {
+    float: left;
+}
+
+#next_movie {
+    float: right;
+}
+
+.button {
+    cursor: pointer;
+}
+
+.button_div {
+    margin-top: auto;
+}
+
+.row {
+    max-width: 100%;
+    padding: 0.7%;
+}
+
+.main_row {
+    box-shadow: 5px black;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    padding-left: 7%;
+    max-height: 80%;
+}
+
+.title_div {
+    text-align: center;
+    cursor: pointer;
+    font-family: Rammetto One;
+}
+
+.title_box {
+    text-align: center;
+}
+
+.rel_date_box {
+    text-align: center;
+}
+
+/* Outlines for visibility. Uncomment to check boxes. */
+
+/* .main_row {
+    outline: 2px solid red;
+}
+
+.image_box {
+    outline: 2px solid blue;
+}
+
+.overview {
+    outline: 1px solid pink;
+}
+
+.data_box {
+    outline: 2px solid green;
+}
+
+.vote_avg_box {
+    outline: 1px solid darkblue;
+}
+
+.title_box {
+    outline: 1px solid darkgreen;
+}
+
+.rel_date_box {
+    outline: 1px solid cyan;
+}
+
+.title_rel_box {
+    outline: 1px solid black;
+}
+
+.more_info {
+    outline: 1px solid steelblue;
+}
+
+.vote_title_rel_box {
+    outline: 1px solid red;
+}
+
+.title_div {
+    outline: 1px solid firebrick;
+} */

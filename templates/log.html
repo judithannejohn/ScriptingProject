@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Login Prof</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+    body{background-color:lightgreen;
+        background-image: url("static/back8.jpg");}
+    </style>
+    
+</head>
+
+<body>
+        
+    <div class="row">
+        <div class="col-md-4"><img id="poster1" src="static/IIIT-H.png" class="img-responsive img-rounded" width="200" height="300"></div>
+        <div class="col-md-4">
+            <br><br><br><br>
+            <h1>Login for Proffesor</h1>
+            <form name="login">
+                Username<input type="text" name="userid"/>
+                <br>
+                <br>
+                Password<input type="password" name="pswrd"/>
+                <input type="button" onclick="check(this.form)" value="Login"/>
+                <input type="reset" value="Cancel"/>
+            </form>
+            <br><br><br><br>
+            <img id="poster3" src="static/back5.jpg" class="img-responsive img-rounded" width="600" height="800">
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+    <script language="javascript">
+        function check(form) { /*function to check userid & password*/
+                /*the following code checkes whether the entered userid and password are matching*/
+                if(form.userid.value == "prof" && form.pswrd.value == "12345") {
+                    window.open('profblog.html')/*opens the target page while Id & password matches*/
+                }
+                else if (form.userid.value == "abi_chem@iiit.ac.in" && form.pswrd.value == "abi_chem"){
+                    window.open('abhijit.html')
+                }
+                else if (form.userid.value == "nita@iiit.ac.in" && form.pswrd.value == "nita"){
+                    window.open('nita.html')
+                }
+                else if (form.userid.value == "vinod.pk@iiit.ac.in" && form.pswrd.value == "vinod.pk"){
+                    window.open('vinod.html')
+                }
+                else if (form.userid.value == "deva@iiit.ac.in" && form.pswrd.value == "deva"){
+                    window.open('deva.html')
+                }
+                else if (form.userid.value == "laltu@iiit.ac.in" && form.pswrd.value == "laltu"){
+                    window.open('harjinder.html')
+                }
+                else if (form.userid.value == "vgandhi@iiit.ac.in" && form.pswrd.value == "vgandhi"){
+                    window.open('vineet.html')
+                }
+                else if (form.userid.value == "jawahar@iiit.ac.in" && form.pswrd.value == "jawahar"){
+                    window.open('jawahar.html')
+                }
+                else if (form.userid.value == "drpsdeb@gmail.com" && form.pswrd.value == "drpsdeb") {
+                    window.open('deb.html')
+                }
+                else if (form.userid.value == "kamal@iiit.ac.in" && form.pswrd.value == "kamal"){
+                    window.open('kamalakar.html')
+                }
+                else if (form.userid.value == "kishore@iiit.ac.in" && form.pswrd.value == "kishore"){
+                    window.open('kishore.html')
+                }
+                else if (form.userid.value == "sangal@iiit.ac.in" && form.pswrd.value == "sangal"){
+                    window.open('rajeev.html')
+                }
+                else if (form.userid.value == "abhishek.sarkar@iiit.ac.in" && form.pswrd.value == "abhishek.sarkar"){
+                    window.open('abhishek.html')
+                }
+                else if (form.userid.value == "rcprasad@iiit.ac.in" && form.pswrd.value == "rcprasad"){
+                    window.open('rama.html')
+                }
+                else if (form.userid.value == "rehanaiisc@gmail.com" && form.pswrd.value == "rehanaiisc"){
+                    window.open('shaik.html')
+                } 
+                else if (form.userid.value == "rammurthy@iiit.ac.in" && form.pswrd.value == "rammurthy"){
+                    window.open('garimella.html')
+
+                } 
+                else if(form.userid.value == "anil.vuppala@iiit.ac.in" && form.pswrd.value == "anil.vuppala"){
+                    window.open('anil.html')
+                }
+     
+                else {
+                    alert("Error Password or Username")/*displays error message*/
+                }
+            }
+        </script>
+    </body>
+</html>

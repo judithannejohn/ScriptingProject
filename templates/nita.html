@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> home </title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="row">
+		<div class="col-md-3"><img id="poster1" src="static/IIIT-H.png" class="img-responsive img-rounded" width="200" height="300"></div>
+	<div class ="col-md-6">
+<form >
+	<br>
+	<br>
+  <em>Professor Name</em>:<br>
+  <input type="text" name="firstname" onkeyup="coursename(this)"/>
+  <br>
+  <em>Research Updates</em>:<br>
+  <textarea name="message" rows="5" cols="50" onkeyup="description(this)">
+  </textarea>
+  <br><br>
+  <button type="button" onclick="update()">post</button>
+  <button type="button" onclick="show()">show entries</button><p id="demo"></p>
+</form>
+</div>
+<div class ="col-md-3">
+	    
+        <br>
+      	<br>
+      	<h1 id="heading">Fellow Proffessor</h1>
+      	<form action="CCNSB.html">
+      		<li><input type="submit" value="Abhijit Mitra,Phd(IIT Kanpur)" /></li>
+      	</form>
+        <form action="CCNSB.html">
+          <li><input type="submit" value="Vinod P.K." /></li>
+        </form>
+        <form action="CCNSB.html">
+          <li><input type="submit" value="Deva Priyakumar" /></li>
+        </form>
+        <form action="CCNSB.html">
+          <li><input type="submit" value="Harjinder Singh" /></li>
+        </form>
+        <form action="CVIT.html">
+          <li><input type="submit" value="Vineet Gandhi" /></li>
+        </form>
+        <form action="CVIT.html">
+          <li><input type="submit" value="C.V.Jawahar" /></li>
+        </form>
+        <form action="CogSci.html">
+          <li><input type="submit" value="PS Deb" /></li>
+        </form>
+        <form action="DSAC.html">
+            <li><input type="submit" value="Kamalakar Karlapalem" /></li>
+          </form>
+        <form action="LTRC.html">
+          <li><input type="submit" value="Kishore S.Prahallad" /></li>
+        </form>
+        <form action="LTRC.html">
+          <li><input type="submit" value="Rajeev Sangal" /></li>
+        </form>
+        <form action="LTRC.html">
+          <li><input type="submit" value="Dr. Abhishek Sarkar" /></li>
+        </form>
+        <form action="LSI.html">
+          <li><input type="submit" value="Rama Chandra Pillutla" /></li>
+        </form>
+        <form action="LSI.html">
+          <li><input type="submit" value="Dr. Shaik Rehana" /></li>
+        </form>
+        <form action="SPCRC.html">
+          <li><input type="submit" value="Garimella Rama Murthy" /></li>
+        </form>
+        <form action="SPCRC.html">
+          <li><input type="submit" value="Anil kumar Vuppala" /></li>
+        </form>
+
+
+        </ul>
+        
+
+
+        
+</div>
+<script>
+var myObj;
+myObj=
+{	"courses": [
+{
+			"prof_name": "Nita",
+			"Research_update": "I am currently working on ngs dataset"
+            },
+		{
+			"prof_name": "vinod",
+			"Research_update": "working on datamining"
+		},
+		{
+			"prof_name": "abhijeet",
+			"Research_update": "working advanced biomolecular architecture"
+		},
+		{
+			"prof_name": "Deva",
+			"Research_update": "working on molecular modeling"
+		},
+		{
+			"prof_name": "kamalakar",
+			"Research_update": "Working on Datawarehousing"
+		}
+	]
+}
+var cname,cdescription;
+function coursename(n)
+{
+	cname=n.value;
+	console.log(cname);
+}
+function description(d)
+{
+	cdescription=d.value;
+}
+function update()
+{
+	var n=myObj.courses.length;
+	myObj.courses[n]={prof_name:cname,
+					Research_update:cdescription};
+//	var obj=JSON.stringify(myObj);
+	console.log(myObj);
+}
+function show()
+{
+    var data="";
+        var s=myObj.courses;
+        console.log(s.length);
+        for (var i = 0; i < s.length; i++) {
+        	console.log(s[i]);
+            data+='<div id="courses">';
+            data+='<p>prof name:'+s[i].prof_name+'</p>';
+            data+='<p>Research description:'+s[i].Research_update+'</p>';
+            data+='</div>';
+        }
+        document.getElementById('demo').innerHTML += data;  
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Adding To The Blog</title>
+</head>
+	<body>
+	<div class="row">
+		<div class="col-md-3"><img id="poster1" src="static/IIIT-H.png" class="img-responsive img-rounded" width="200" height="300"></div>
+		<div class ="col-md-6">
+			<br>
+			<p><font size="8"><b>ADD BLOGS</b></font></p>
+			<br><br><br>
+			<form action="/addtoblog" method="POST" >
+				<p><b>Title : </b><input type="text" name="title" ></p>
+				<p><b>Blog : </b><input type="text" name="blog"></p>
+				<b><p><input type="submit" value="Submit The Blog"></p></b>
+			</form></div></div>
+	</body>
+</html>
